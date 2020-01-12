@@ -2,5 +2,22 @@ mixin top-line()
 	// start .top-line
 	+b.top-line.block-with-lazy
 		.container
-			.row top-line
+			.row
+				.col-xl-3.col.d-none.d-md-block
+					+logo-block
+				.col-xl.order-xl-0.order-last
+						.main-menu-js.d-xl-block
+							ul
+								li: a(href="#") ПРОЕКТЫ         
+								li: a(href="#")  УСЛУГИ & ЦЕНЫ
+								li: a(href="#")    КОНТАКТЫ
+				.col-md-auto.col
+					+e.soc(href="#")
+						img(src="img/@2x/instagram.png", alt="")
+					+e.tel(href="tel:+7(919)7661832") +7 (919) 766 18 32
+				.col-auto.d-none.d-sm-block
+					+e.btn.link-modal(href="#modal-call") Заказать звонок
+				.col-auto.d-xl-none
+					+b.toggle-menu-mobile--js
+						span
 	// end .top-line

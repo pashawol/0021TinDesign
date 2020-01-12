@@ -1,0 +1,162 @@
+// start .s-about
+.s-test,
+.s-about {
+	p {
+		font-weight: 300;
+	}
+
+	.section-title {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(690);
+		padding-bottom: rem(105);
+	}
+
+	@include media-breakpoint-up(lg) {
+
+		.section-content {
+			ul {
+
+				max-width: rem(590 + 30);
+			}
+
+			blockquote,
+			p {
+				max-width: rem(590);
+			}
+		}
+	}
+
+	blockquote {
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 57px;
+			height: 2px;
+			background-color: #ffffff;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	&__img-wrap {
+		@include a-cent(y);
+	}
+
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__btn {
+		width: rem(210);
+		@extend .btn;
+		@extend .btn-secondary;
+	}
+
+	img {
+		@include media-breakpoint-up(lg) {
+
+
+			@include a-cent(y);
+			right: rem(-120);
+			margin-top: rem(80);
+		}
+
+		position: relative;
+		z-index: -1;
+		margin-top: rem(-140);
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(30);
+
+		@include media-breakpoint-up(xl) {
+
+			max-width: rem(617);
+		}
+
+		@include media-breakpoint-up(sm) {
+
+			max-width: rem(517);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {
+		padding-bottom: rem(172);
+	}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.s-about
+
+blockquote {
+	@extend .h3;
+	font-weight: 300;
+}
+
+.s-about {
+	@include media-breakpoint-down(md) {
+		position: relative;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			@include a-cent(x);
+			top: 0;
+			height: 1px;
+			background-color: #ffffff;
+
+		}
+
+		&::after {
+			width: rem(57px);
+			height: 2px;
+		}
+
+		&::before {
+			width: 100%;
+			max-width: 1170px;
+			opacity: 0.1;
+		}
+	}
+}

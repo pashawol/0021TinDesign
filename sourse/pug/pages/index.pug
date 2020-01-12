@@ -3,18 +3,30 @@ extends layout/main.pug
 
 include ../blocks/s-content/_s-content.pug
 include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-diz/_s-diz.pug
+include ../blocks/s-servises/_s-servises.pug
+include ../blocks/s-test/_s-test.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/s-calc/_s-calc.pug
+
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'Главная'
 	title= title
 block pagecontent 
-	+mob-mnu()
+	//- +mob-mnu()
 	+header()
 		+top-line()
-		+top-nav()
-	+header-block()
-	+s-form()
+		+header-block()
+	+s-about
+	+s-diz
+	+s-servises
+	+s-test
+	+s-work
+	+s-calc
 	+s-contact()
+	+s-form()
 	+footer()

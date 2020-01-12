@@ -3,7 +3,16 @@ mixin s-contact()
 	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-contact
-				
-			.row
+				h2 Наши контакты
+				p Студия дизайна интерьеров TinDesign находится в #[strong Москве]
+
+			+e.link(href="mailto:studiotindesign@gmail.com")
+				img(src="img/@2x/email.png", alt="")
+				| studiotindesign@gmail.com
+			br
+			+e.link(href="tel:+7(919)7661832")
+				img(src="img/svg/tel.svg", alt="")
+				| +7 (919) 766 18 32
+			br
+			+soc()
 	// end s-contact

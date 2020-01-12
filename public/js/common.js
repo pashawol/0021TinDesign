@@ -38,57 +38,6 @@ var JSCCommon = {
 		});
 	},
 	// /magnificPopupCall
-	toggleMenu: function toggleMenu() {
-		var _this = this;
-
-		_this.btnToggleMenuMobile.forEach(function (element) {
-			element.addEventListener('click', function () {
-				_this.btnToggleMenuMobile.forEach(function (element) {
-					element.classList.toggle("on");
-				});
-
-				_this.menuMobile.classList.toggle("active");
-
-				_this.body.classList.toggle("fixed");
-
-				return false;
-			});
-		});
-	},
-	closeMenu: function closeMenu() {
-		var _this = this;
-
-		_this.btnToggleMenuMobile.forEach(function (element) {
-			element.classList.remove("on");
-		});
-
-		_this.menuMobile.classList.remove("active");
-
-		_this.body.classList.remove("fixed");
-	},
-	mobileMenu: function mobileMenu() {
-		// закрыть/открыть мобильное меню
-		var _this = this;
-
-		_this.toggleMenu();
-
-		_this.menuMobileLink.forEach(function (element) {
-			element.addEventListener('click', function (e) {
-				console.log(element);
-
-				_this.closeMenu();
-			});
-		});
-
-		document.addEventListener('mouseup', function (event) {
-			var container = event.target.closest(".menu-mobile--js.active"); // (1)
-
-			if (!container) {
-				_this.closeMenu();
-			}
-		});
-	},
-	// /mobileMenu
 	// табы  . 
 	tabscostume: function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
@@ -112,11 +61,10 @@ function eventHandler() {
 	svg4everybody({});
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1.png);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -144,10 +92,6 @@ function eventHandler() {
 				$('.top-nav  ').removeClass('fixed');
 			}
 		}); // конец добавил
-
-		if (window.matchMedia("(min-width: 992px)").matches) {
-			JSCCommon.closeMenu();
-		}
 	}
 
 	$(window).resize(function () {
@@ -197,76 +141,18 @@ function eventHandler() {
 				arrows: true
 			}
 		}]
-	})); // $('.s-gal__slider\
-	// ,.slider-for2 ')
-	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {
-	// 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-	// 	});
-	// slider
-	// const swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-	// });
-	// modal window
-	//    const wow = new WOW({ mobile: false });
-	//         wow.init();
-
-	var gets = function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-
-		return b;
-	}(); // form
-
-
-	$("form").submit(function (e) {
-		e.preventDefault();
-		var th = $(this);
-		var data = th.serialize();
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-		$.ajax({
-			url: 'action.php',
-			type: 'POST',
-			data: data
-		}).done(function (data) {
-			$.fancybox.close();
-			$.fancybox.open({
-				src: '#modal-thanks',
-				type: 'inline'
-			}); // window.location.replace("/thanks.html");
-
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset"); // $.magnificPopup.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-				// yaCounter55828534.reachGoal('zakaz');
-			}, 4000);
-		}).fail(function () {});
+	}));
+	$(".toggle-menu-mobile--js").click(function () {
+		$(".main-menu-js").slideToggle();
+		$(this).toggleClass('on');
+	});
+	$('.tabs-js').responsiveTabs({
+		// startCollapsed: 'accordion',
+		// rotate: false,
+		// startCollapsed: 'accordion',
+		// collapsible: 'accordion',
+		setHash: true,
+		animation: 'fade'
 	});
 }
 

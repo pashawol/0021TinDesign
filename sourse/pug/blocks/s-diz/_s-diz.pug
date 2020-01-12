@@ -1,0 +1,19 @@
+mixin s-diz()
+	// start s-diz
+	+b.SECTION.s-diz.section.text-white.section-b-top#s-diz&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 дизайн интерьера #[span.text-secondary от&nbsp;идеи до&nbsp;реализации]
+			.row
+				mixin item(i,t)
+					.col-md-6
+						+e.item(href="#")
+							+e.DIV.img-wrap
+								img.res-i.lazy(src="#" data-src=`img/@2x/servises-${i}.jpg`, alt="")
+							+e.DIV.title= t
+					// /.col-md-6
+				+item("1","планировочные решения")
+				+item("2","РАБОЧИЕ ЧЕРТЕЖИ")
+				+item("3","СТИЛИСТИЧЕСКИЕ РЕШЕНИЯ (КОЛЛАЖИ)")
+				+item("4","ВИЗУАЛИЗАЦИИ")
+	// end s-diz

@@ -1,0 +1,131 @@
+// start .s-work
+.s-work {
+	text-align: center;
+
+	p {
+		font-weight: 300;
+	}
+
+	&__img-wrap {
+		width: rem(160);
+		height: rem(160);
+		background-color: inherit;
+		border-radius: 50%;
+		opacity: 0.3;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		line-height: rem(129);
+		vertical-align: middle;
+		// margin-bottom: rem(20);
+		position: relative;
+		z-index: 2;
+
+		&::before,
+		&::after {
+			content: '';
+			width: rem(160);
+			height: rem(160);
+			border-radius: 50%;
+			@include a-cent;
+
+		}
+
+		&::before {
+			z-index: -2;
+			background-color: $secondary;
+			margin-top: rem(-6);
+		}
+
+		&::after {
+			content: '';
+			background-color: $dark;
+			z-index: -1;
+		}
+
+		img {
+			max-width: 60%;
+			max-height: 60%;
+		}
+	}
+
+	&__title {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(270);
+		color: $secondary;
+		@extend .h4;
+		text-transform: uppercase;
+		margin-bottom: rem(30);
+		// margin-top: ;
+	}
+
+	&__col {
+		margin-bottom: rem(20);
+
+		@include media-breakpoint-up(sm) {
+
+			&:not(:last-child) {
+				&::after {
+					content: url(../img/svg/arrow.svg);
+					top: rem(56);
+					// right: 0;
+					left: 100%;
+					transform: translateX(-50%);
+					position: absolute;
+				}
+			}
+		}
+	}
+
+	p {
+		max-width: rem(280);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@include media-breakpoint-up(xl) {
+		.container {
+			max-width: 1260px;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(60);
+	}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.s-work

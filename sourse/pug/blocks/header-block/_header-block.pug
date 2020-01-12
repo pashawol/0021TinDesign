@@ -1,7 +1,25 @@
 mixin header-block()
 	// start header-block
-	+b.header-block#header-block
+	+b.header-block#header-block(style="background-image: url(img/@2x/header-bg.jpg);")
 		.container
-			h1 header-block
-			.row
+			+e.text
+				.d-md-none
+					+logo-block()
+				h1 СТИЛЬНЫЙ <br> ДИЗАЙН ИНТЕРЬЕРА
+				p
+					strong ДЛЯ ВАШЕГО КОМФОРТА
+			+form-wrap()(class="order-md-first")
+				.row
+					.col-md
+						+input("Ваше имя")
+							+icon('user')
+					.col-md
+						+input("Ваш телеофон",'tel')
+							+icon('tel')
+					.col-md-3
+						+e.INPUT.btn(type="submit" value="оставить заявку")  
+			p.fw-300 Оставьте номер Вашего телефона и&nbsp;мы&nbsp;перезвоним в&nbsp;ближайшее время
+			+e.down
+
+				
 	// end header-block

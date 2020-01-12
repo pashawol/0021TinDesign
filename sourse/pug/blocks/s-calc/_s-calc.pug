@@ -1,0 +1,51 @@
+mixin s-calc()
+	// start s-calc
+	+b.SECTION.s-calc.section#s-calc&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Расчитать стоимость дизайн-проекта
+				p Выберите подходящий тариф и&nbsp;колличество квадратных метров для просчтёта
+			.tabs-js
+				ul.tabs-control
+					li: +e.tab-link(href="#tab-1") ПЛАНИРОВОЧНЫЙ
+					li: +e.tab-link(href="#tab-2"  ) ЭСКИЗНЫЙ
+					li: +e.tab-link(href="#tab-3" ) БАЗОВЫЙ
+					li: +e.tab-link(href="#tab-4" ) СТАНДАРТ
+				+e.wrap
+					- for (var x = 1; x < 5; x++)
+						+b.tab-cont(id=`tab-${x}`) 
+							+e.inner
+								+e.head
+									.row
+										.col
+											label
+												span Площадь в м2
+												input.form-control(type="text" value="1")
+										.col-lg-4.col-6 Стоимость работ: #[span.h2 600] руб.
+											
+										.col-lg-auto.d-none.d-md-block
+											+e.btn.btn-secondary(href="#") ПОДРОБНЕЕ О ТАРИФЕ
+								+e.body
+									ul
+										li Обмер помещения, фото и&nbsp;видео фиксация
+
+										li Составление и&nbsp;утверждение Технического Задания с&nbsp;заказчиком
+
+										li Обмерный план с&nbsp;привязкой инженерных коммуникаций
+
+										li Планировка (перепланировка) с&nbsp;расстановкой мебели и оборудования 2-3 варианта
+
+										li Корректировка планировочного	решения, утверждение окончательного	варианта
+
+										li План демонтажа перегородок и&nbsp;конструкций
+
+										li План монтажа перегородок и&nbsp;конструкций, включая привязки возводимых перегородок с&nbsp;указанием всех размеров, высот и&nbsp;толщин
+
+										li Экспликация помещений после перепланировки
+
+										li План с&nbsp;расстановкой мебели и&nbsp;оборудования с&nbsp;размерами
+
+										li План размещения сантехнического оборудования
+								+e.foot
+									+e.btn.btn-primary.link-modal(href="#modal-call") ОСТАВИТЬ ЗАЯВКУ
+	// end s-calc

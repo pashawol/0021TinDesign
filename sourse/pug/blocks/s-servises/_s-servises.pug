@@ -1,0 +1,33 @@
+mixin s-servises()
+	// start s-servises
+	+b.SECTION.s-servises.section.text-white.section-b-top#s-servises&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Услуги
+				p Наша дизайн-студия TinDesign предоставляет полный спектр услуг по&nbsp;проектированию жилых и&nbsp;коммерческих объектов в&nbsp;Москве, Подмосковье и&nbsp;регионах.
+				
+			.row
+				mixin item(i)
+					.col-lg-3.col-md-4.col-6
+						+e.img-wrap
+							img.res-i.lazy(src="#" data-src=`img/@2x/servises-i-${i}.png`, alt="")
+						block
+					// /.col-lg-3.col-md-4.col-6
+				+item("1")
+					p Разработка планировочных решений и&nbsp;стилевого направления;
+				+item("2")
+					p Согласование перепланировки
+				+item("3")
+					p 3d&nbsp;визуализация всех основных помещений на&nbsp;объекте
+				+item("4")
+					p Подготовка комплекта строительных чертежей и&nbsp;документации
+				+item("5")
+					p Подбор отделочных материалов, мебели оборудования, аксессуаров
+				+item("6")
+					p Составление сметы
+				+item("7")
+					p Ремонт квартир, домов, коттеджей, офисов
+				+item("8")
+					p Авторский надзор
+			+e.btn.link-modal(href="#modal-call") оставить заявку
+	// end s-servises
