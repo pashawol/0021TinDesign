@@ -64,7 +64,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1.png);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/kollaji.png);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -122,6 +122,34 @@ function eventHandler() {
 		autoplaySpeed: 6000,
 		lazyLoad: 'progressive'
 	};
+	$('.slider-lg-js').slick(_objectSpread({}, defaultSlide, {
+		// arrows: false,
+		dots: false,
+		arrows: false,
+		asNavFor: '.slider-nav-js'
+	}));
+	$('.slider-nav-js').slick(_objectSpread({}, defaultSlide, {
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '.slider-lg-js',
+		focusOnSelect: true
+	})); // карусель 
+
+	$('.slider-js').slick(_objectSpread({}, defaultSlide, {
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		responsive: [{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 4
+			}
+		}, {
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 3
+			}
+		}]
+	}));
 	$('.s-gal__slider--js').slick(_objectSpread({}, defaultSlide, {
 		slidesToShow: 1,
 		responsive: [{

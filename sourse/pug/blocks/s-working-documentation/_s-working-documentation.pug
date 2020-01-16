@@ -1,0 +1,25 @@
+mixin s-working-documentation()
+	- let src= 'img/@2x/slider-item.jpg'
+	mixin img()
+		img.res-i(src="#" data-lazy= src, alt="")
+	// start s-working-documentation
+	+b.SECTION.s-working-documentation.section#s-working-documentation&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Пример рабочей документации
+				
+			.row
+				.col
+					+b.s-prod-head-images
+						+e.inner
+							.slider-lg-js
+								- for (var x = 0; x < 5; x++)
+									+e.slide--lg
+										a(href= src data-fancybox="slider-item")
+											+img()
+						.slider-nav-js
+							- for (var x = 0; x < 5; x++)
+								+e.slide
+									+e.img-wrap
+										+img()
+	// end s-working-documentation
