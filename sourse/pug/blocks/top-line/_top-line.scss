@@ -31,8 +31,14 @@
   }
 
   a {
-    color: #ffffff !important;
+    color: #ffffff;
+    text-decoration: none !important;
+
+    &:hover {
+      color: $primary;
+    }
   }
+
 
   ul {
     display: flex;

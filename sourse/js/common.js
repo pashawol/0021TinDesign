@@ -67,7 +67,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/kollaji.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -132,7 +132,7 @@ function eventHandler() {
 	const arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
 	// // карусель
-
+	
 	const defaultSlide = {
 		speed: 600,
 		infinite: true,
@@ -144,6 +144,49 @@ function eventHandler() {
 		autoplaySpeed: 6000,
 		lazyLoad: 'progressive',
 	};
+
+
+	$('.slider-lg-js').slick({
+		...defaultSlide,
+		// arrows: false,
+		dots: false,
+		arrows: false,
+		asNavFor: '.slider-nav-js'
+	});
+	$('.slider-nav-js').slick({
+		...defaultSlide,
+		slidesToShow: 4,
+
+		slidesToScroll: 1,
+		asNavFor: '.slider-lg-js',
+
+		focusOnSelect: true
+	});
+	// карусель 
+	$('.slider-js').slick({
+		...defaultSlide,
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+
+			
+		]
+	});
+
+	
+
 	$('.s-gal__slider--js').slick({
 		...defaultSlide,
 

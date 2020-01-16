@@ -38,10 +38,22 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
 .breadcrumb{
+  margin-bottom: 0;
+  a {
+    color: #fff;
+    font-style: italic;
+    font-size: rem(15);
+    font-weight: 400;
+    &:hover {
+      text-decoration: none;
+      color: #b1061b;
+    }
+  }
   .active{
     a{
       color: $breadcrumb-active-color;
       pointer-events: none;
+      text-transform: none;
     }
   }
 }
