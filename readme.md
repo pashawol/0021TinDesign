@@ -5,3 +5,4 @@
 1. <https://pashawol.github.io/0021TinDesign/public/tindesign-planresh.html>
 1. <https://pashawol.github.io/0021TinDesign/public/tindesign-proekti.html>
 1. <https://pashawol.github.io/0021TinDesign/public/tindesign-rab-cherteji.html>
+1. <https://pashawol.github.io/0021TinDesign/public/uslugi.html>

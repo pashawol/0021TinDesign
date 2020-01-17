@@ -3,8 +3,13 @@
 	.s-working-documentation {
 		text-align: center;
 		position: relative;
+		padding-bottom: rem(7);
 		h2 {
 			color: #fff;
+
+		}
+		.section-title {
+			padding-bottom: 0;
 		}
 		.s-prod-head-images {
 		&__slider--lg {
@@ -12,16 +17,13 @@
 			background-color: #ffffff;
 			margin-bottom: rem(34 - 20);
 		}
-		.slick-slider {
-			// max-width: ;
-		}
+
 		&__slide--lg {
 			a {
 				// margin-bottom: rem(33);
 				display: block;
 				// height: rem(310);
-				@include block(300, 300);
-				line-height: rem(310 - 40);
+				@include block(1111, 775);
 				// vertical-align: middle;
 				padding: rem(20);
 				position: relative;
@@ -35,14 +37,22 @@
 	
 		}
 	
-		&__slider-nav-js {
+		.slider-nav-js {
 			// margin-left: rem(-7px);
 			// margin-right: rem(-7);
-			padding-left: rem(35);
-			padding-right: rem(35);
+			// padding-left: rem(35);
+			// padding-right: rem(35);
 			padding-bottom: rem(20);
 			max-width: rem(1037);
 			margin: auto;
+			@include media-breakpoint-up(md){
+				.r {
+					right: rem(-40);
+				}
+				.l {
+					left: rem(-40);
+				}
+			}
 		}
 	
 		&__slide {
@@ -53,18 +63,25 @@
 		&__img-wrap {
 			@include block(111, 79);
 			
+			border-radius: rem(10);
 			img {
-				border-radius: rem(10);
 				@include a-cent;
 				max-width: 70%;
 				max-height: 70%;
+				border-radius: rem(10);
 			}
 	
 			// height: 79px;
 			box-shadow: 3px 3px 15px rgba(154, 187, 206, 0.17);
 			background-color: #ffffff;
 		}
-	
+	}
+	.slick-arrow {
+		path {
+			fill: $secondary;
+		}
+
+
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

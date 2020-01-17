@@ -63,3 +63,13 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.s-collages
+
+.planresh {
+	padding-bottom: rem(10);
+}
+.blueprints {
+	p {
+		line-height: 1.24;
+	}
+	padding-bottom: rem(8);
+}

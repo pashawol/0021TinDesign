@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-diz/_s-diz.pug
+include ../blocks/s-collages/_s-collages.pug
+include ../blocks/s-apartment-planing/_s-apartment-planing.pug
+include ../blocks/s-package-services/_s-package-services.pug
+include ../blocks/s-servises/_s-servises.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/s-test/_s-test.pug
+include ../blocks/s-calc/_s-calc.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Услуги и цены'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-line()
+		+header-block-tindesign-kollaji(title)
+	.bottom-border
+		.container
+			+breadcrumb('Главная', title)
+	+s-package-services
+	+s-calc-planing
+	+s-calc-sketch
+	+s-calc-base
+	+s-calc-standart
+	+s-servises
+	+s-test
+	+s-work
+	// +s-diz
+	// +s-calc
+	+s-contact()
+	+s-form()
+	+footer()
