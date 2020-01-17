@@ -64,7 +64,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/kollaji.png);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/uslugi.png);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -107,7 +107,7 @@ function eventHandler() {
 		}, 1100);
 		return false;
 	});
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.1 384"><g data-name="Слой 2"><g data-name="Слой 1"><path d="M195.62,0c1,.47,2,1,3,1.41a15.91,15.91,0,0,1,5.74,24.85c-1.12,1.34-2.4,2.54-3.64,3.78Q121.46,109.29,42.2,188.51c-1.05,1.05-2.25,2-4.74,4.12,1.88,1.08,3.42,1.59,4.45,2.62q80,79.84,159.87,159.74c4.64,4.63,7.33,9.72,5.91,16.42s-6.13,10.23-12.07,12.59h-6.75c-3.82-2.69-8.11-4.9-11.37-8.15Q92.1,290.76,6.94,205.43c-9.25-9.25-9.25-17.61,0-26.86Q92.18,93.32,177.49,8.15c3.26-3.25,7.56-5.46,11.38-8.15Z"/></g></g></svg>';
 	var arrl2 = ' <div class="r">' + icon,
 			arrr2 = ' <div class="l">' + icon; // // карусель
 
@@ -119,8 +119,8 @@ function eventHandler() {
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 		// autoplay: true,
-		autoplaySpeed: 6000,
-		lazyLoad: 'progressive'
+		autoplaySpeed: 6000 // lazyLoad: 'progressive',
+
 	};
 	$('.slider-lg-js').slick(_objectSpread({}, defaultSlide, {
 		// arrows: false,

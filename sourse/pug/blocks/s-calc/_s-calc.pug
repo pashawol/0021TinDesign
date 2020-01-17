@@ -49,3 +49,314 @@ mixin s-calc()
 								+e.foot
 									+e.btn.btn-primary.link-modal(href="#modal-call") ОСТАВИТЬ ЗАЯВКУ
 	// end s-calc
+
+
+mixin s-calc-planing()
+	// start s-calc
+	+b.s-calc.s-calc-planing#s-calc-1&attributes(attributes)
+		.container
+			.tabs-js
+				ul.tabs-control
+					li: +e.tab-link ПЛАНИРОВОЧНЫЙ
+				+e.wrap
+					- for (var x = 1; x < 2; x++)
+						+b.tab-cont
+							+e.inner
+								+e.head
+									.row
+										.col
+											label
+												span Площадь в м2
+												input.form-control(type="text" value="1")
+										.col-lg-4.col-6 Стоимость работ: #[span.h2 600] руб.
+											
+										.col-lg-auto.d-none.d-md-block
+											+e.btn.btn-primary(href="#") ОСТАВИТЬ ЗАЯВКУ
+								+e.body
+									ul
+										li 1. Обмер помещения, фото и&nbsp;видео фиксация
+
+										li 2. Составление и&nbsp;утверждение Технического Задания с&nbsp;заказчиком
+
+										li 3. Обмерный план с&nbsp;привязкой инженерных коммуникаций
+
+										li 4. Планировка (перепланировка) с&nbsp;расстановкой мебели и оборудования 2-3 варианта
+
+										li 5. Корректировка планировочного	решения, утверждение окончательного	варианта
+
+										li 6. План демонтажа перегородок и&nbsp;конструкций
+
+										li 7. План монтажа перегородок и&nbsp;конструкций, включая привязки возводимых перегородок с&nbsp;указанием всех размеров, высот и&nbsp;толщин
+
+										li 8. Экспликация помещений после перепланировки
+
+										li 9. План с&nbsp;расстановкой мебели и&nbsp;оборудования с&nbsp;размерами
+
+										li 10. План размещения сантехнического оборудования
+								+e.foot
+									+e.btn.btn-primary.link-modal(href="#modal-call") ОСТАВИТЬ ЗАЯВКУ
+
+			.row
+				.col
+					h4.text-center ПРИМЕРЫ РАБОТ ПО&nbsp;ТАРИФУ &laquo;ПЛАНИРОВОЧНЫЙ&raquo;
+					+b.slider-js
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+	// end s-calc
+
+mixin s-calc-sketch()
+	// start s-calc
+	+b.s-calc.s-calc-planing#s-calc-2&attributes(attributes)
+		.container
+			.tabs-js.border-top
+				ul.tabs-control
+					li: +e.tab-link.sketch-bgc ЭСКИЗНЫЙ
+				+e.wrap
+					- for (var x = 1; x < 2; x++)
+						+b.tab-cont
+							+e.inner
+								+e.head
+									.row
+										.col
+											label
+												span Площадь в м2
+												input.form-control(type="text" value="1")
+										.col-lg-4.col-6 Стоимость работ: #[span.h2 1400] руб.
+											
+										.col-lg-auto.d-none.d-md-block
+											+e.btn.btn-primary(href="#") ОСТАВИТЬ ЗАЯВКУ
+								+e.body
+									ul
+										li 1. Обмер помещения, фото и&nbsp;видео фиксация
+
+										li 2. Составление и&nbsp;утверждение Технического Задания с&nbsp;заказчиком
+
+										li 3. Обмерный план с&nbsp;привязкой инженерных коммуникаций
+
+										li 4. Планировка (перепланировка) с&nbsp;расстановкой мебели и оборудования 2-3 варианта
+
+										li 5. Корректировка планировочного	решения, утверждение окончательного	варианта
+
+										li 6. План демонтажа перегородок и&nbsp;конструкций
+
+										li 7. План монтажа перегородок и&nbsp;конструкций, включая привязки возводимых перегородок с&nbsp;указанием всех размеров, высот и&nbsp;толщин
+
+										li 8. Экспликация помещений после перепланировки
+
+										li 9. План с&nbsp;расстановкой мебели и&nbsp;оборудования с&nbsp;размерами
+
+										li 10. План размещения сантехнического оборудования
+										li 11. Разработка концепции помещений<br>в&nbsp;виде стилистических коллажей<br>с&nbsp;подборкой цветовой гаммы, примеров отделочных материалов, осветительных приборов, мебели, интерьерных аксессуаров и&nbsp;текстиля.
+										li 12. План размещения розеток и&nbsp;электрических выпусков
+										li 13. План потолков и&nbsp;потолочных конструкций
+										li 14. План размещения осветительных приборов и&nbsp;выключателей
+										li 15. План пола
+								+e.foot
+									+e.btn.btn-primary.link-modal(href="#modal-call") ОСТАВИТЬ ЗАЯВКУ
+
+			.row
+				.col
+					h4.text-center ПРИМЕРЫ РАБОТ ПО&nbsp;ТАРИФУ &laquo;ЭСКИЗНЫЙ&raquo;
+					+b.slider-js
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+	// end s-calc
+
+
+mixin s-calc-base()
+	// start s-calc
+	+b.s-calc.s-calc-planing#s-calc-3&attributes(attributes)
+		.container
+			.tabs-js.border-top
+				ul.tabs-control
+					li: +e.tab-link.base-bgc БАЗОВЫЙ
+				+e.wrap
+					- for (var x = 1; x < 2; x++)
+						+b.tab-cont
+							+e.inner
+								+e.head
+									.row
+										.col
+											label
+												span Площадь в м2
+												input.form-control(type="text" value="1")
+										.col-lg-4.col-6 Стоимость работ: #[span.h2 1900] руб.
+											
+										.col-lg-auto.d-none.d-md-block
+											+e.btn.btn-primary(href="#") ОСТАВИТЬ ЗАЯВКУ
+								+e.body
+									ul
+										li 1. Обмер помещения, фото и&nbsp;видео фиксация
+
+										li 2. Составление и&nbsp;утверждение Технического Задания с&nbsp;заказчиком
+
+										li 3. Обмерный план с&nbsp;привязкой инженерных коммуникаций
+
+										li 4. Планировка (перепланировка) с&nbsp;расстановкой мебели и оборудования 2-3 варианта
+
+										li 5. Корректировка планировочного	решения, утверждение окончательного	варианта
+
+										li 6. План демонтажа перегородок и&nbsp;конструкций
+
+										li 7. План монтажа перегородок и&nbsp;конструкций, включая привязки возводимых перегородок с&nbsp;указанием всех размеров, высот и&nbsp;толщин
+
+										li 8. Экспликация помещений после перепланировки
+
+										li 9. План с&nbsp;расстановкой мебели и&nbsp;оборудования с&nbsp;размерами
+
+										li 10. План размещения сантехнического оборудования
+										li 11. Разработка концепции помещений в&nbsp;виде стилистических коллажей с&nbsp;подборкой цветовой гаммы, примеров отделочных материалов, осветительных приборов, мебели, интерьерных аксессуаров и&nbsp;текстиля.
+										li 12. Цветные эскизы, изометрия помещений
+										li 13. План размещения розеток и&nbsp;электрических выпусков
+										li 14. План размещения кондиционеров
+										li 15. План потолков и&nbsp;потолочных конструкций
+										li 16. План необходимых разрезов и&nbsp;сечений потолка
+										li 17. План размещения осветительных приборов
+										li 18. План размещения выключателей с&nbsp;привязкой
+										li 19. План пола
+										li 20. План теплого пола
+										li 21. План напольных плинтусов
+										li 22. План дверей и&nbsp;дверных проемов, спецификация
+										li 23. Развертки стен всех помещений с&nbsp;указанием отделочных материалов и&nbsp;декоративных элементов
+										li 24. Схемы раскладки плитки с&nbsp;указанием ее&nbsp;количества
+										li 25. Ведомость&nbsp;эл. фурнитуры
+										li 26. Ведомость отделочных материалов
+										li 27. Ведомость сантехнического оборудования
+										li 28. Три выезда по&nbsp;подбору материалов в&nbsp;салоны и&nbsp;магазины
+								+e.foot
+									+e.btn.btn-primary.link-modal(href="#modal-call") ОСТАВИТЬ ЗАЯВКУ
+
+			.row
+				.col
+					h4.text-center ПРИМЕРЫ РАБОТ ПО&nbsp;ТАРИФУ &laquo;БАЗОВЫЙ&raquo;
+					+b.slider-js
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+
+
+mixin s-calc-standart()
+	// start s-calc
+	+b.s-calc.s-calc-planing#s-calc-4&attributes(attributes)
+		.container
+			.tabs-js.border-top
+				ul.tabs-control
+					li: +e.tab-link.standart-bgc СТАНДАРТ
+				+e.wrap
+					- for (var x = 1; x < 2; x++)
+						+b.tab-cont
+							+e.inner
+								+e.head
+									.row
+										.col
+											label
+												span Площадь в м2
+												input.form-control(type="text" value="1")
+										.col-lg-4.col-6 Стоимость работ: #[span.h2 2400] руб.
+											
+										.col-lg-auto.d-none.d-md-block
+											+e.btn.btn-primary(href="#") ОСТАВИТЬ ЗАЯВКУ
+								+e.body
+									ul
+										li 1. Обмер помещения, фото и&nbsp;видео фиксация
+
+										li 2. Составление и&nbsp;утверждение Технического Задания с&nbsp;заказчиком
+
+										li 3. Обмерный план с&nbsp;привязкой инженерных коммуникаций
+
+										li 4. Планировка (перепланировка) с&nbsp;расстановкой мебели и оборудования 2-3 варианта
+
+										li 5. Корректировка планировочного	решения, утверждение окончательного	варианта
+
+										li 6. План демонтажа перегородок и&nbsp;конструкций
+
+										li 7. План монтажа перегородок и&nbsp;конструкций, включая привязки возводимых перегородок с&nbsp;указанием всех размеров, высот и&nbsp;толщин
+
+										li 8. Экспликация помещений после перепланировки
+
+										li 9. План с&nbsp;расстановкой мебели и&nbsp;оборудования с&nbsp;размерами
+
+										li 10. План размещения сантехнического оборудования
+										li 11. Разработка концепции помещений<br>в&nbsp;виде стилистических коллажей<br>с&nbsp;подборкой цветовой гаммы, примеров отделочных материалов, осветительных приборов, мебели, интерьерных аксессуаров и&nbsp;текстиля.
+										li 12. Цветные эскизы, изометрия помещений
+										li 13. Фотореалистичная 3d&nbsp;визуализация всех помещений в&nbsp;нескольких ракурсах
+										li 14. План размещения розеток и&nbsp;электрических выпусков
+										li 15. План размещения кондиционеров
+										li 16. План потолков и&nbsp;потолочных конструкций
+										li 17. План необходимых разрезов и&nbsp;сечений потолка
+										li 18. План размещения осветительных приборов
+										li 19. План размещения выключателей с&nbsp;привязкой
+										li 20. План пола
+										li 21. План теплого пола
+										li 22. План напольных плинтусов
+										li 23. План дверей и&nbsp;дверных проемов, спецификация
+										li 24. Развертки стен всех помещений с&nbsp;указанием отделочных материалов и&nbsp;декоративных элементов
+										li 25. Схемы раскладки плитки с&nbsp;указанием ее&nbsp;количества
+										li 26. Ведомость электро&nbsp;&mdash; фурнитуры
+										li 27. Ведомость отделочных материалов
+										li 28. Спецификация осветительных приборов
+										li 29. Спецификация сантехнического оборудования
+										li 30. Спецификация мебели
+										li 31. Три выезда по&nbsp;подбору материалов в&nbsp;салоны и&nbsp;магазины
+
+								+e.foot
+									+e.btn.btn-primary.link-modal(href="#modal-call") ОСТАВИТЬ ЗАЯВКУ
+
+			.row
+				.col
+					h4.text-center ПРИМЕРЫ РАБОТ ПО&nbsp;ТАРИФУ &laquo;СТАНДАРТ&raquo;
+					+b.slider-js
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+						+e.slider-item
+							a(href='img/@2x/slider-item.jpg' data-fancybox="slider-item")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+	// end s-calc

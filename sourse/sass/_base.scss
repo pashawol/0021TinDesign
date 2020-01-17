@@ -329,14 +329,14 @@ body {
 	&.l {
 		left: 0;
 
-		svg {
-			@include transform(rotateY(180deg));
-		}
+
 	}
 
 	&.r {
 		right: 0;
-
+		svg {
+			@include transform(rotateY(180deg));
+		}
 	}
 
 	svg {

@@ -3,19 +3,19 @@ mixin s-apartment-planing()
 	+b.SECTION.s-apartment-planing.section#s-apartment-planing&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Планировочные решения квартиры 44 м2
+				h2 Планировочные решения квартиры <span>44 м2</span>
 				
 			.row
-				.col-md-6
+				.col-md-5
 					h4 Основные пожелания заказчиков:
 					ul
-						li организация пространства с&nbsp;наличием трех комнат (спальня, детская, гостиная) и&nbsp;изолированной кухни;
+						li организация пространства с&nbsp;наличием трех комнат (спальня, детская, гостиная) и&nbsp;изолированной <br>кухни;
 						li рабочее место или мини-кабинет, с&nbsp;возможным размещением на&nbsp;балконе;
-						li создание большого количества мест для хранения, с&nbsp;выделением отдельных помещений (гардеробных);
+						li создание большого количества мест для хранения, с&nbsp;выделением отдельных помещений <br>(гардеробных);
 						li наличие двух санузлов, один из&nbsp;которых с&nbsp;ванной, другой с&nbsp;душевым ограждением;
 						li размещение электрокамина в&nbsp;гостиной; <br> организация большого количества мест хранения в 
 						li оне приготовления пищи;<br> мебель в&nbsp;стиле минимализм.
-				.col-md-6
+				.col-md-7
 					+e.item.bg-wrap
 						+pic(`collages-1`,'bg')(class="picture-bg")
 
@@ -23,28 +23,34 @@ mixin s-apartment-planing()
 				.col
 					+b.slider-js
 						+e.slider-item
-							img.lazy(src="#" data-src="img/@2x/slider-item.jpg" alt="")
+							a(href= src data-fancybox="slider-item.jpg")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
 						+e.slider-item
-							img.lazy(src="#" data-src="img/@2x/slider-item.jpg" alt="")
+							a(href= src data-fancybox="slider-item.jpg")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
 						+e.slider-item
-							img.lazy(src="#" data-src="img/@2x/slider-item.jpg" alt="")
+							a(href= src data-fancybox="slider-item.jpg")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
 						+e.slider-item
-							img.lazy(src="#" data-src="img/@2x/slider-item.jpg" alt="")
+							a(href= src data-fancybox="slider-item.jpg")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
 						+e.slider-item
-							img.lazy(src="#" data-src="img/@2x/slider-item.jpg" alt="")
+							a(href= src data-fancybox="slider-item.jpg")
+								img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
 
-
+			+b.section-title.text-center
+				h2 Планировочные решения квартиры <span>44 м2</span>
 			.row
-				.col-md-6
+				.col-md-5
 					h4 Основные пожелания заказчиков:
 					ul
-						li организация пространства с&nbsp;наличием трех комнат (спальня, детская, гостиная) и&nbsp;изолированной кухни;
+						li организация пространства с&nbsp;наличием трех комнат (спальня, детская, гостиная) и&nbsp;изолированной <br>кухни;
 						li рабочее место или мини-кабинет, с&nbsp;возможным размещением на&nbsp;балконе;
-						li создание большого количества мест для хранения, с&nbsp;выделением отдельных помещений (гардеробных);
+						li создание большого количества мест для хранения, с&nbsp;выделением отдельных помещений <br>(гардеробных);
 						li наличие двух санузлов, один из&nbsp;которых с&nbsp;ванной, другой с&nbsp;душевым ограждением;
 						li размещение электрокамина в&nbsp;гостиной; <br> организация большого количества мест хранения в 
 						li оне приготовления пищи;<br> мебель в&nbsp;стиле минимализм.
-				.col-md-6
+				.col-md-7
 					+e.item.bg-wrap
 						+pic(`collages-1`,'bg')(class="picture-bg")
 
@@ -52,15 +58,25 @@ mixin s-apartment-planing()
 				.col
 					+b.slider-js
 						+e.slider-item
-							img.lazy(src="#" data-src="img/@2x/slider-item.jpg" alt="")
+							.image
+								a(href= src data-fancybox="slider-item.jpg")
+									img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
 						+e.slider-item
-							img.lazy(src="#" data-src="img/@2x/slider-item.jpg" alt="")
+							.image
+								a(href= src data-fancybox="slider-item.jpg")
+									img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
 						+e.slider-item
-							img.lazy(src="#" data-src="img/@2x/slider-item.jpg" alt="")
+							.image
+								a(href= src data-fancybox="slider-item.jpg")
+									img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
 						+e.slider-item
-							img.lazy(src="#" data-src="img/@2x/slider-item.jpg" alt="")
+							.image
+								a(href= src data-fancybox="slider-item.jpg")
+									img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
 						+e.slider-item
-							img.lazy(src="#" data-src="img/@2x/slider-item.jpg" alt="")
-						
+							.image
+								a(href= src data-fancybox="slider-item.jpg")
+									img(src="#" data-lazy="img/@2x/slider-item.jpg" alt="")
+					
 					+e.btn(href="#") показать еще
 	// end s-apartment-planing

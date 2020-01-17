@@ -13,7 +13,7 @@ mixin s-collages()
 			.row
 				mixin item()
 					+e.col.col-md-6
-						+e.item.bg-wrap(href="#")
+						+e.item.bg-wrap
 							+pic(`collages-1`,'bg')(class="picture-bg")
 
 				+item
@@ -28,7 +28,7 @@ mixin s-collages()
 
 mixin s-collages-planig()
 	// start s-collages
-	+b.SECTION.s-collages.section#s-collages&attributes(attributes)
+	+b.SECTION.s-collages.section.planresh#s-collages&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 ПЛАНИРОВОЧНОЕ РЕШЕНИЕ — ОСНОВА ДИЗАЙН ПРОЕКТА
@@ -43,7 +43,7 @@ mixin s-collages-planig()
 
 mixin s-collages-blueprints()
 	// start s-collages
-	+b.SECTION.s-collages.section#s-collages&attributes(attributes)
+	+b.SECTION.s-collages.blueprints.section#s-collages&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 РАБОЧИЕ ЧЕРТЕЖИ — ПОДРОБНАЯ ИНСТРУКЦИЯ ДЛЯ СТРОИТЕЛЕЙ
