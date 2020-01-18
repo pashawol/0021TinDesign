@@ -51,9 +51,13 @@
 				padding: rem(11) rem(42);
 				text-transform: uppercase;
 				color: #fff;
+				font-weight: 700;
 				// margin: 0 auto;
 				&:hover {
+					color: #b1061b;
 					text-decoration: none;
+					@include mt;
+					background-color: #6b7587;
 				}
 			}
 		.slider-js {
