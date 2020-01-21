@@ -14,7 +14,7 @@ module.exports = function () {
 			.pipe($.gp.responsive({
 				'*': [{
 					// Produce @2x images
-					width: '100%', quality: 75, progressive: true, rename: { prefix: '@2x/', },
+					width: '100%', quality: 99, progressive: true, rename: { prefix: '@2x/', },
 				},
 					//  {
 					// 	// Produce @1x images
