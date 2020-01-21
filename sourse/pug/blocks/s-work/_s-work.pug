@@ -10,7 +10,7 @@ mixin s-work()
 				mixin item(i, t, p)
 					+e.col.col-lg-3.col-sm-6
 						+e.img-wrap
-							img.res-i.lazy(src="#" data-src=`img/@2x/s-work-${i}.png`, alt="")
+							img.res-i.img-svg(src=`img/svg/work-${i}.svg`, alt="")
 						+e.title= t
 						p= p
 					// /.col-lg-3.col-sm-6
