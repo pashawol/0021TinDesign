@@ -61,7 +61,7 @@
 		}
 	
 		&__img-wrap {
-			@include block(111, 79);
+			@include block(249, 174);
 			
 			border-radius: rem(10);
 			img {
@@ -69,8 +69,11 @@
 				max-width: 100%;
 				max-height: 100%;
 				border-radius: rem(10);
+				box-shadow: 3px 3px 15px rgba(154, 187, 206, 0.17);
 			}
-
+	
+			// height: 79px;
+			// background-color: #ffffff;
 		}
 	}
 	.slick-arrow {
