@@ -29,19 +29,20 @@
 					height: rem(9);
 					position: absolute;
 					left: 0;
-					top: rem(10);
+					top: rem(8);
 					background-color: $primary;
 					border-radius: 50%;
 				}
 			}
 		}
 		&__item {
-			display: flex;
-			border-radius: rem(10);
-			@include block(30, 30);
-			overflow: hidden;
-			&:hover {
-				transform: rotate(360deg);
+			height: auto;
+			overflow: visible;
+			.picture-bg {
+				position: static;
+			}
+			img {
+				border-radius: rem(10);
 			}
 		}
 
